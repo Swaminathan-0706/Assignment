@@ -8,8 +8,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
-
-
+import { AgePipe } from './Utilities/pipes/age.pipe';
+import { AuthGuard} from './login-page/auth.guard';
+import { AppService } from './app.service';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -32,6 +33,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     SideNavbarComponent,
     EmployeeDetailsComponent,
     EmployeeListComponent,
+    AgePipe
         
   ],
   imports: [
@@ -52,7 +54,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AppService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
