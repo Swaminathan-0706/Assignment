@@ -22,12 +22,16 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     SideNavbarComponent,
+    EmployeeDetailsComponent,
+    EmployeeListComponent,
         
   ],
   imports: [
