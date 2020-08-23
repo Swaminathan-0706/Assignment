@@ -25,7 +25,7 @@ export class AppService {
   }
 
   public getEmployees(): Observable<EmployeesResponse> {
-    const url = `/assets/employees.json`;
+    const url = `http://dummy.restapiexample.com/api/v1/employees`;
     console.log('employee url', url);
     return this.http.get(url, this.httpOptions)
     .pipe(
@@ -60,7 +60,7 @@ export class AppService {
 
   public getEmployeeById(req): Observable<EmployeeResponse> {
     const { id: employeeId } = req.params;
-    const url = `/assets/employees.json`;
+    const url = `http://dummy.restapiexample.com/api/v1/employees`;
     return this.http.get(url, this.httpOptions)
     .pipe(
         map(employees => this.mapEmployeeResponse(employees, employeeId))
