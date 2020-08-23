@@ -4,17 +4,17 @@
         <ul>
           <li class="intro-menu">
             <strong>Welcome to EDM</strong>
-            <!-- //<div *ngIf="appService.isLoggedIn"><span>Employee name</span></div>
-            //<div *ngIf="!appService.isLoggedIn"><span>Logon to employee portal</span></div> -->
+            <div *ngIf="appService.isLoggedIn"><span>Employee name</span></div>
+            <div *ngIf="!appService.isLoggedIn"><span>Logon to employee portal</span></div>
           </li>
-          <!-- <li *ngIf="appService.isLoggedIn" (click)="menuClick('employees')">
+          <li *ngIf="appService.isLoggedIn" (click)="menuClick('employees')">
             <mat-icon>list</mat-icon>
             <strong class="margin-left-5">Employees</strong>
-          </li> -->
-          <!-- <li *ngIf="appService.isLoggedIn" (click)="menuClick('logout')">
+          </li>
+          <li *ngIf="appService.isLoggedIn" (click)="menuClick('logout')">
             <mat-icon>exit_to_app</mat-icon>
             <strong class="margin-left-5">Logout</strong>
-          </li> -->
+          </li>
         </ul>
       </nav>
     </mat-sidenav>
@@ -31,10 +31,10 @@
         </mat-toolbar>
       </header>
       <main>
+        <app-login-page></app-login-page>
         <router-outlet></router-outlet>
       </main>
-      <footer>
-    
-      </footer>
+      
     </mat-sidenav-content>
   </mat-sidenav-container>
+  
