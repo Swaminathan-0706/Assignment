@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import * as _ from 'lodash';
 import { AppService, Employee } from '../app.service';
+//import { EmployeesService, IEmployee } from '../trial.service';
 
 @Component({
   selector: 'app-employee-list',
@@ -43,7 +44,8 @@ export class EmployeeListComponent implements OnInit {
   getEmployees() {
     this.isLoading = true;
     this.appService.getEmployees().subscribe((response) => {
-      const { employees, errors } = response;
+     const { employees, errors } = response;
+     //const {'employee_name', 'employee_salary','employee_age'}=response
       if (_.size(errors) > 0) {
         const { message } = _.first(errors);
         this.errorMessage = message;
