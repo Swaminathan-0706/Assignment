@@ -51,7 +51,7 @@ export class AppService {
                 employeeSalary: employee.employee_salary,
                 employeeAge: employee.employee_age,
                 profileImage: employee.profile_image,
-                mployeeLink:`employees/${employee.id}`
+                EmployeeLink:`employees/${employee.id}`
             }
         })
     }
