@@ -23,7 +23,7 @@ export class AppService {
     console.log('Setting isLoggedIn value', isLoggedIn);
     this.isLoggedIn = isLoggedIn;
   }
-
+// Funciton to get Employees Details
   public getEmployees(): Observable<EmployeesResponse> {
     const url = `http://dummy.restapiexample.com/api/v1/employees`;
     console.log('employee url', url);
@@ -57,7 +57,7 @@ export class AppService {
     }
     return response;
   }
-
+// Funciton to get Employees by Specific ID
   public getEmployeeById(req): Observable<EmployeeResponse> {
     const { id: employeeId } = req.params;
     const url = `http://dummy.restapiexample.com/api/v1/employees`;
